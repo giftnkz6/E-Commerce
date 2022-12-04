@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel="stylesheet" href="./styles/style.css">
+    <title>JavaScript e-commerce</title>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg ">
+            <div class="container-fluid">
+              <img class="logo" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAdVBMVEX///8AAAD39/ft7e34+PhoaGhQUFDDw8PQ0NDc3Nyrq6uTk5Ovr6+7u7vKysrn5+ebm5tXV1csLCzW1tZtbW0zMzOBgYEiIiJCQkJdXV20tLRycnIQEBDx8fGZmZk8PDx8fHxJSUkXFxeKioqioqIUFBQ1NTWfOkAUAAAD9UlEQVR4nO3aa3vxShSAYSMIIaSlVdUWld3//xN3HBIJOc6sId7rub9bM4tZc9TpAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAE/N6T66Bw30ND7jbKV7Yc3Um2p86lvNxHtiwywcrHTyixLsS/dFXtd9V2qr90t0l2ok3B1p82CnlAp1CjDSW6oX2f7Icib9KDv14WpHiL4drbF9F+776yE91Z/rx1gp9SrXI0mjYKBO9o5BmKh8lSfWKTHO5+Kcnfr1NMvvxDvEaNlq35vu3+L0TMrvaHgIspbpmIxROFAXfdNJ3jmGac08Ew3Nr1R6ZuV3choMAn0zFw3NZTo7tZSYHdbHUFuBSIYus6ZU+Z14qg2DNDVrJhYye6zROdwjZ9L0rJkYm5ffye8p3k4oXGO3Q/NYfhOxBuKxMRaL2MD1rBnbCZaMHwcVKekmerlD82AtecRxkrD3PftmF/Rs+X2LtrRLAouGLeX4+UNTuPxOgkto4cgFoqH5WpSdUi/iK9YsFVw6do5R+FKcXbTlsHDDsLmEt31D8+2vy7JT6sfGeuylGlhYiJ+Yjz/K03v9tNLud7oNa7/hbLIqz85G+Z31060MbLTQc7fLorQSmjeDNQyzDYnHn//sKrOzVH5nVxsK0dizST8/oaw3O+V3NrlqzeCaLqsb3/xVWQ2lmsx33Z7MznseVMyaCXvldxZct2h+WVpzaB6F1k+jvdtGjQ4X0dAs3Gve2PhSaZS4+QlNfsT5T92heWC7/M7ymg51AjkNhubB+51OaV5u6013vj33vXpBT/vSfRdrrmA6b3L2PD3lNXGX8jsbFvThq+YQajJrxlZiC24dxf2r/pprL+gZ+/teknTLvurSrjSbNWO/WnOYiesNW1bRUXvkNR+aB5u73+J1OoXXXGdvwTw75znToPKQV8D4XUxH2SC9fPPrsee7rh+O1x//aWYn8i6mw6/umQiRdzEt27vkt3tA+cU0JvvGhN7F9OQcK6TtZS/mmxpV99DI48ov5lrNb/DA8ouVr/dmHlp+idBafsLvYtosZSj+LqbPSoaD1vzdqFN0vjci+ixtTnzT1pbyS8iuh5bexYzUOlrUZO1dzEzBfzyas34xr2svk1/QtvK7mAuk99fC8ksxPj4N7nMxr89wRWxt+aWY5Be07P/u+bQX/b87Xsyb0bv5bH35pf02z8/Gn7Iscqozyljaf5aW5tR/lI6O7s80PBO90v8JpgzavbiXqXNhs/Mecy8vpFe+Q/1a+E9XfDe63l9Bev3wuabOErPJInuc2vR/3CfYlzU0G079z0/fHY7aeyQCAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADAv+Z/HBwq9QVvQoQAAAAASUVORK5CYII=" alt="logo">
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mb-2 mb-lg-0">
+                  <li><a href="index.html">Home</a></li>
+                  <li><a href="products.html">Products</a></li>
+                  <li><a href="admin.html">Admin</a></li>
+                  <li><a href="checkout.html">Checkout</a></li>
+                </ul>
+    
+              </div>
+            </div>
+          </nav>
+    </header>
+
+    
+
+    <!-- Products -->
+    <section id="products" class="container">
+        <h3 class="display-3">Our Hot Products</h3>
+        <div class="row">
+            <div class="col">
+                <div class="card" style="width: 14rem;">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSl_I2Br35MOphVF_ir3Gn0zQAIGn84f9SLUw&usqp=CAU" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title"> Air VaporMax Plus</h5>
+                      <p class="card-text">Orange</p>
+                      <p class="card-text">R 1 908,06</p>
+                      <!-- <a href="#" class="btn btn-primary">View More</a> -->
+                      <button class="buttons">Checkout</button>
+                    </div>
+                  </div>
+            </div>
+            <div class="col">
+                <div class="card" style="width: 14rem;">
+                    <img src="https://static.nike.com/a/images/t_prod_ss/w_640,c_limit,f_auto/f2b7f11f-628f-4fb7-afa1-66f7a51f52f0/air-force-1-07-fresh-dm0211-001-release-date.jpg" id="secondimg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Nike Air Force 1 '07</h5>
+                      <p class="card-text">Black</p>
+                      <p class="card-text">R 2 799,95</p>
+                      <!-- <a href="#" class="btn btn-primary">View More</a> -->
+                      <button class="buttons">Checkout</button>
+                    </div>
+                  </div>
+            </div>
+            <div class="col">
+                <div class="card" style="width: 14rem;">
+                    <img src="data:image/jpeg;base64,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" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Air Jordan 1 mid</h5>
+                      <p class="card-text">Black/White/Fire Red</p>
+                      <p class="card-text">R 2 000,95</p>
+                      <!-- <a href="#" class="btn btn-primary">View More</a> -->
+                      <button id="buttons" class="buttons">Checkout</button>
+                    </div>
+                  </div>
+            </div>
+            <div class="col">
+                <div class="card" style="width: 14rem;">
+                    <img src="https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/edb69c60-505d-4eef-9058-55eb3ca34d26/air-max-plus-3-shoes-hVr4TK.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Nike Air Max Plus 3</h5>
+                      <p class="card-text">Gold/Black/Viotech</p>
+                      <p class="card-text">R 3 599,95</p>
+                      <!-- <a href="#" class="btn btn-primary">View More</a> -->
+                      <button class="buttons">Checkout</button>
+                    </div>
+                  </div>
+            </div>
+           
+
+        </div>
+        
+        <!-- <h2>Checkout</h2>
+        <div class="check" >
+          <h3>Here are your checkout details</h3>
+          <div class="checked">
+            <p id="checkOutInfo"></p>
+
+          </div>
+        </div> -->
+    </section>
+    <script src="./js/code.js"></script>
+</body>
+</html>

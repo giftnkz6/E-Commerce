@@ -1,0 +1,109 @@
+*,
+*::after,
+*::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+header nav div{
+    display: flex;
+}
+header nav div div ul{
+    margin-left: auto;
+}
+
+header nav div div ul li{
+    padding: 0 5rem;
+}
+body{
+    text-align: center;
+    /* background-color: #5B84B1FF; */
+    /* background-color: #D85A7FFF; */
+    /* color: #ED2B33FF; */
+    /* color: skyblue; */
+    /* color: tomato; */
+}
+.check{
+    border: 5px solid blue;
+    width: 400px;
+    height: 400px;
+    background-color: aquamarine;
+    margin: auto;
+    text-align: start;
+}
+.checked{
+    display: flex;
+}
+.buttons{
+    background-color: red;
+    border-radius: 2px;
+    color: yellow;
+    /* font-size: 19px; */
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+.logo{
+    width: 2rem;
+}
+header{
+    /* background-color: #949398FF; */
+    margin-bottom: 1rem;
+}
+
+.home{
+    /* height: 50vh; */
+    text-align: center;
+    /* color: tomato; */
+    /* background-color: #5B84B1FF; */
+    /* background-color: #D85A7FFF; */
+    color: black;
+    /* background-image: url("https://images.freecreatives.com/wp-content/uploads/2017/01/Nike-Black-and-White-Logo.jpg"); */
+    background-image: url(../images/Background\ image.jpg);
+    /* background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQIaQ2typEhnBqh2L-E28botcB5Imr7KnMAMg&usqp=CAU"); */
+    background-repeat: no-repeat;
+    background-size: 100vw;
+    height: 100vh;
+    /* background-size: 50vh; */
+    /* margin: auto; */
+    font-size: 1rem;
+}
+.home h1{
+    font-size: 3rem;
+}
+.home img{
+    width: 65vw;
+    object-fit: cover;
+    height: 80vh;
+    margin-bottom: 2rem;
+}
+#products{
+    /* background-color: #5B84B1FF; */
+    /* color: tomato; */
+    /* background-color: #D85A7FFF; */
+    /* color: #ED2B33FF; */
+
+}
+#products div div #secondimg{
+    height: 14rem;
+
+}
+#products div .card{
+    /* width: 14rem; */
+    /* height: 30rem; */
+    margin: 2rem 0;
+    color: black;
+}
+
+a:hover{
+    color: blue;
+}
+
+@media screen and (width <= 870px) {
+    .home h1{
+        font-size: 1rem;
+    }
+    
+}
