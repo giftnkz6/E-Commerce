@@ -1,4 +1,4 @@
-//  Empty array
+//  Array of objects
 let checkOut = [
     {
         brand: "Nike",
@@ -28,7 +28,6 @@ let checkOut = [
 let checkOutButton = document.querySelectorAll(".buttons");
 let details = document.querySelector(".card-text").innerHTML;
 let nameOfProduct = document.querySelector(".card-title").innerHTML;
-// let display = document.querySelector("#checkOutInfo").innerText;
 let btn = document.querySelector(".clickMe");
 // Checkout event listener
 checkOutButton.forEach( value => {
@@ -36,9 +35,15 @@ checkOutButton.forEach( value => {
         e.preventDefault()
         alert("Successfully added to your checkout")
         console.table(checkOut);
+        console.log(e.currentTarget.id);
     })
 })
 
+// function checkClickedProduct() {
+//     if(checkOutButton[0]){
+//         document.querySelector("#checkoutInfo").innerHTML =  
+//     }
+// }
 
 
 // checkOutButton.addEventListener("click", (e) => {
