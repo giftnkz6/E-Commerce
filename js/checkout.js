@@ -25,8 +25,8 @@ let products = [
     }
 ]
 
-localStorage.setItem("products", JSON.stringify(products))
-document.querySelector("#checkoutInfo").innerHTML = localStorage.getItem("brand")
-let listOfProducts = localStorage.getItem("products")
-console.table(listOfProducts);
+// localStorage.setItem("checkout", JSON.stringify(products))
+// document.querySelector("#checkoutInfo").innerHTML = localStorage.getItem("brand")
+// let listOfProducts = localStorage.getItem("checkout")
+// console.table(listOfProducts);
 

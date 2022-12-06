@@ -53,6 +53,10 @@ header{
     margin-bottom: 5rem;
 }
 
+img{
+    object-fit: cover;
+}
+
 .home{
     /* height: 50vh; */
     text-align: center;
@@ -88,18 +92,22 @@ header{
 }
 #products div div #secondimg{
     height: 14rem;
-
+}
+#products div .card img{
+    height: 14rem;
 }
 #products div .card{
     /* width: 14rem; */
     /* height: 30rem; */
     margin: 2rem 0;
     color: black;
+
 }
 
 a:hover{
     color: blue;
 }
+
 
 @media screen and (width <= 870px) {
     .home h1{
