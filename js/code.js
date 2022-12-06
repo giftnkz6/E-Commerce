@@ -1,10 +1,11 @@
 //  Array of objects
-let checkOut = [
+let products = [
     {
         brand: "Nike",
         name: "Orange max",
         price: 2999,
-        colour: "Orange"
+        colour: "Orange",
+        image: "./images/background image.jpg"
     },
     {
         brand: "Nike",
@@ -38,6 +39,7 @@ checkOutButton.forEach( value => {
         console.log(e.currentTarget.id);
     })
 })
+
 
 // function checkClickedProduct() {
 //     if(checkOutButton[0]){
