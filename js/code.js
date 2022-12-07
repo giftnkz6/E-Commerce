@@ -120,24 +120,6 @@ function showSneakers () {
         
         `
     })
-    // product.forEach(sneakers => {
-    //     document.querySelector("#products").innerHTML +=`
-    //     <div class="row">
-    //         <div class="col">
-    //             <div class="card" style="width: 14rem;">
-    //                 <img src= "${sneakers.image}" class="card-img-top" alt="...">
-    //                 <div class="card-body">
-    //                   <h5 class="card-title"> ${sneakers.name}</h5>
-    //                   <p class="card-text">${sneakers.colour}</p>
-    //                   <p class="card-text">${sneakers.price}</p>
-                
-    //                   <button class="buttons">Checkout</button>
-    //                 </div>
-    //             </div>
-    //         </div>
-    //     </div>
-
-    // })
 };
 showSneakers();
 
@@ -156,9 +138,9 @@ checkOutButton.forEach( value => {
     })
 })
 
-checkOutButton.addEventListener("click", (e) => {
-    e.preventDefault()
-    alert("Successfully added to your checkout")
+// checkOutButton.addEventListener("click", (e) => {
+//     e.preventDefault()
+//     alert("Successfully added to your checkout")
 
-});
+// });
 
