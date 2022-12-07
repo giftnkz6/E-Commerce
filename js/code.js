@@ -78,7 +78,7 @@ function showSneakers () {
                 <p class="card-text">${sneaker.colour}</p>
                 <p class="card-text">R${sneaker.price}</p>
         
-                <button class="buttons">Checkout</button>
+                <button class="buttons">Add to Checkout</button>
             </div>
         </div>    
 
@@ -123,27 +123,34 @@ showSneakers();
 
 
 
-// let checkOutButton = document.querySelectorAll(".buttons");
-// let details = document.querySelector(".card-text").innerHTML;
-// let nameOfProduct = document.querySelector(".card-title").innerHTML;
-// let btn = document.querySelector(".clickMe");
-// Checkout event listener
-// checkOutButton.forEach( value => {
-//     value.addEventListener("click", (e) => {
-//         e.preventDefault()
-//         alert("Successfully added to your checkout")
-//         console.table(checkOut);
-//         console.log(e.currentTarget.id);
-//     })
-// })
+let checkOutButton = document.querySelectorAll(".buttons");
 
+// Checkout button event listener
+checkOutButton.forEach( value => {
+    value.addEventListener("click", (e) => {
+        e.preventDefault()
+        alert("Successfully added to your checkout")
+        console.log(e.currentTarget.id);
+    })
+})
 
-// function checkClickedProduct() {
-//     if(checkOutButton[0]){
-//         document.querySelector("#checkoutInfo").innerHTML =  
-//     }
-// }
-
+// Admin
+function adminData() {
+    products.forEach((sneaker) => {
+        document.querySelector(".table").innerHTML += `
+        <tbody>
+          <tr>
+            <th scope="row">${sneaker.id}</th>
+            <td>${sneaker.brand}</td>
+            <td>${sneaker.name}</td>
+            <td>${sneaker.colour}</td>
+          </tr>
+          <tr>
+        </tbody>
+        `
+    })
+}
+console.log(adminData());
 
 // checkOutButton.addEventListener("click", (e) => {
 //     e.preventDefault()
