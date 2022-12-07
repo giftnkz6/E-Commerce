@@ -1,3 +1,8 @@
+
+
+
+
+
 //  Array of objects
 let products = JSON.parse(localStorage.getItem("products")) ? 
     JSON.parse(localStorage.getItem("products")) : [
@@ -98,67 +103,46 @@ let products = JSON.parse(localStorage.getItem("products")) ?
         image: "https://i.postimg.cc/V6P3Zqt8/Puma-Grey-sneaker.jpg"
     },
 
-]
+];
 
-function showSneakers () {
+
+function adminData () {
     products.forEach((sneaker)=>{
-        document.querySelector(".product-wrapper").innerHTML += ` 
-        <div class= "col-lg-3 col-md-4 col-sm-12">
-        <div class="card" style="width: 14rem;">
-            <img src= "${sneaker.image}" class="card-img-top" alt="...">
-            <div class="card-body">
-                <h5 class="card-title"> ${sneaker.brand}</h5>
-                <p class="card-text">${sneaker.name}</p>
-                <p class="card-text">${sneaker.colour}</p>
-                <p class="card-text">R${sneaker.price}</p>
-        
-                <button class="buttons">Add to Checkout</button>
-            </div>
-        </div>    
-
-        </div>
+        document.querySelector("#admin-data").innerHTML += ` 
+        <tr>
+                    <th scope="row">${sneaker.id}</th>
+                    <td>${sneaker.brand}</td>
+                    <td>${sneaker.name}</td>
+                    <td>R${sneaker.price}</td>
+                    <td>${sneaker.colour}</td>
+                  </tr>
         
         `
     })
-    // product.forEach(sneakers => {
-    //     document.querySelector("#products").innerHTML +=`
-    //     <div class="row">
-    //         <div class="col">
-    //             <div class="card" style="width: 14rem;">
-    //                 <img src= "${sneakers.image}" class="card-img-top" alt="...">
-    //                 <div class="card-body">
-    //                   <h5 class="card-title"> ${sneakers.name}</h5>
-    //                   <p class="card-text">${sneakers.colour}</p>
-    //                   <p class="card-text">${sneakers.price}</p>
-                
-    //                   <button class="buttons">Checkout</button>
-    //                 </div>
-    //             </div>
-    //         </div>
-    //     </div>
 
-    // })
 };
-showSneakers();
+adminData();
+localStorage.removeItem("sortedProducts")
 
 
-
-
-
-let checkOutButton = document.querySelectorAll(".buttons");
-
-// Checkout button event listener
-checkOutButton.forEach( value => {
-    value.addEventListener("click", (e) => {
-        e.preventDefault()
-        alert("Successfully added to your checkout")
-        console.log(e.currentTarget.id);
-    })
+// Sort Method
+let sortButton = document.querySelector("#sort-btn");
+sortButton.addEventListener("click", (e)=>{
+    sorted();
 })
 
-checkOutButton.addEventListener("click", (e) => {
-    e.preventDefault()
-    alert("Successfully added to your checkout")
+function sorted() {
+    let sortedProducts = products.sort((a,b) => {
+    if(a.name < b.name){
+            return -1;
+        }
+        else if(a.name > b.name){
+            return 1;
+        }
+        else{
+            return 0;
+        }
+    })
+    console.table(sortedProducts);
 
-});
-
+}
