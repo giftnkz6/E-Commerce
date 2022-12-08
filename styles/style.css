@@ -83,6 +83,14 @@ img{
     height: 80vh;
     margin-bottom: 2rem;
 }
+/* form */
+#products .container .container-wrapper{
+    display: flex;
+    width: 400px;
+    margin: auto;
+    gap: 2px;
+}
+
 #products{
     /* background-color: #5B84B1FF; */
     /* color: tomato; */
@@ -112,6 +120,18 @@ a:hover{
 @media screen and (width <= 870px) {
     .home h1{
         font-size: 1rem;
+    }
+    
+}
+@media screen and (width <= 575px) {
+    #products .container .container-wrapper{
+        flex-direction: column;
+        width: 150px;
+    }
+
+    #products div .card{
+        margin: auto;
+        margin-top: 21px;
     }
     
 }

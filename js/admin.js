@@ -167,6 +167,7 @@ function sorted() {
     })
     console.table(sortedProducts);
     // document.querySelector('.table-sort').innerHTML = sortedProducts.forEach;
+    // document.querySelector(".table-sort").innerHTML = ``
     sortedProducts.forEach((sorts) => {
         document.querySelector(".table-sort").innerHTML += `
         <tr>
@@ -215,3 +216,4 @@ function deleteBtn(id) {
     }
   }
 }
+
