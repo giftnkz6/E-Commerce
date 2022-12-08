@@ -116,7 +116,7 @@ function adminData () {
                     <td>${sneaker.name}</td>
                     <td>R${sneaker.price}</td>
                     <td>${sneaker.colour}</td>
-                    <td><button type="button" class="btn mb-5" id="delete-btn"><i class="fa-solid fa-trash"></button></td>
+                    <td><button type="button" class="btn mb-5" id="delete-btn" onclick="deleteBtn()"><i class="fa-solid fa-trash"></button></td>
                     <td><button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="fa-sharp fa-solid fa-pen"></i>
                   </button>
                   
@@ -145,8 +145,6 @@ function adminData () {
 
 };
 adminData();
-localStorage.removeItem("sortedProducts")
-
 
 // Sort Method
 let sortButton = document.querySelector("#sort-btn");
@@ -177,7 +175,7 @@ function sorted() {
                     <td>${sorts.name}</td>
                     <td>R${sorts.price}</td>
                     <td>${sorts.colour}</td>
-                    <td><button type="button" class="btn mb-5" id="delete-btn"><i class="fa-solid fa-trash"></button></td>
+                    <td><button type="button" class="btn delete-btn mb-5" onclick="deleteBtn()"><i class="fa-solid fa-trash"></button></td>
                     <td><button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="fa-sharp fa-solid fa-pen"></i>
                   </button>
                   
@@ -205,4 +203,15 @@ function sorted() {
 
     })
 
+}
+
+
+function deleteBtn(id) {
+  alert("Deletes")
+  if(id >= 0) {
+    products.splice(id,1)
+    for(let i =0; i < products.length; i++) {
+      products[i].id = i++;
+    }
+  }
 }
