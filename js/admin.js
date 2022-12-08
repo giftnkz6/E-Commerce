@@ -166,8 +166,7 @@ function sorted() {
         }
     })
     console.table(sortedProducts);
-    // document.querySelector('.table-sort').innerHTML = sortedProducts.forEach;
-    // document.querySelector(".table-sort").innerHTML = ``
+    document.querySelector(".table-sort").innerHTML = ``
     sortedProducts.forEach((sorts) => {
         document.querySelector(".table-sort").innerHTML += `
         <tr>
@@ -206,14 +205,15 @@ function sorted() {
 
 }
 
-
+let id = 0;
 function deleteBtn(id) {
-  alert("Deletes")
+  // alert("Deletes")
   if(id >= 0) {
     products.splice(id,1)
     for(let i =0; i < products.length; i++) {
-      products[i].id = i++;
+      products[i].id = i + 1;
     }
+    localStorage.setItem('sneaker',JSON.stringify(products))
   }
 }
 

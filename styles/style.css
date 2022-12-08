@@ -65,7 +65,7 @@ img{
     /* background-color: #D85A7FFF; */
     color: black;
     /* background-image: url("https://images.freecreatives.com/wp-content/uploads/2017/01/Nike-Black-and-White-Logo.jpg"); */
-    background-image: url(../images/Background\ image.jpg);
+    background-image: url("https://i.postimg.cc/wMKN5nR3/Background-image.jpg");
     /* background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQIaQ2typEhnBqh2L-E28botcB5Imr7KnMAMg&usqp=CAU"); */
     background-repeat: no-repeat;
     background-size: 100vw;
@@ -78,7 +78,7 @@ img{
     font-size: 3rem;
 }
 .home img{
-    width: 65vw;
+    width: 100vw;
     object-fit: cover;
     height: 80vh;
     margin-bottom: 2rem;
