@@ -1,8 +1,3 @@
-
-
-
-
-
 //  Array of objects
 let products = JSON.parse(localStorage.getItem("products")) ? 
     JSON.parse(localStorage.getItem("products")) : [
@@ -117,7 +112,7 @@ function adminData () {
                     <td>R${sneaker.price}</td>
                     <td>${sneaker.colour}</td>
                     <td><button type="button" class="btn mb-5" id="delete-btn"><i class="fa-solid fa-trash"></button></td>
-                    <td><button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="fa-sharp fa-solid fa-pen"></i>
+                    <td><button type="button" class="btn btn-primary" data-bs-toggle="modal" id ="edt-btn" data-bs-target="#exampleModal"><i class="fa-sharp fa-solid fa-pen"></i>
                   </button>
                   
                   <!-- Modal -->
@@ -129,7 +124,19 @@ function adminData () {
                           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
-                          ...
+                        <div class="mb-3">
+                        
+                        <input type="text" class="form-control" id="brand-input" placeholder="Enter brand of the product">
+                      </div>
+                      <div class="mb-3">
+                      <input type="text" class="form-control" id="name-input" placeholder="Enter name of the product">
+                      </div>
+                      <div class="mb-3">
+                      <input type="number" class="form-control" id="price-input" placeholder="Enter the price of the product">
+                      </div>
+                      <div class="mb-3">
+                      <input type="text" class="form-control" id="colour-input" placeholder="Enter the colour of the product">
+                      </div>
                         </div>
                         <div class="modal-footer">
                           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
@@ -167,7 +174,7 @@ function sorted() {
     })
     console.table(sortedProducts);
     // document.querySelector('.table-sort').innerHTML = sortedProducts.forEach;
-    // document.querySelector(".table-sort").innerHTML = ``
+    document.querySelector(".table-sort").innerHTML = ``
     sortedProducts.forEach((sorts) => {
         document.querySelector(".table-sort").innerHTML += `
         <tr>
@@ -176,7 +183,7 @@ function sorted() {
                     <td>${sorts.name}</td>
                     <td>R${sorts.price}</td>
                     <td>${sorts.colour}</td>
-                    <td><button type="button" class="btn delete-btn mb-5" id="delete-btn><i class="fa-solid fa-trash"></button></td>
+                    <td><button type="button" class="btn mb-5" id="delete-btn"><i class="fa-solid fa-trash"></button></td>
                     <td><button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="fa-sharp fa-solid fa-pen"></i>
                   </button>
                   
@@ -189,7 +196,14 @@ function sorted() {
                           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
-                          ...
+                        <div class="mb-3">
+                        <label for="exampleFormControlInput1" class="form-label">Email address</label>
+                        <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+                      </div>
+                      <div class="mb-3">
+                        <label for="exampleFormControlTextarea1" class="form-label">Example textarea</label>
+                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                      </div>
                         </div>
                         <div class="modal-footer">
                           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
@@ -206,22 +220,24 @@ function sorted() {
 
 }
 
-let removeProduct = document.querySelectorAll("#delete-btn")
-for(let counter = 0; counter < removeProduct.length; counter++){
-  removeProduct[counter].addEventListener("click", (event) => {
+// let removeProduct = document.querySelectorAll("#delete-btn")
+// for(let counter = 0; counter < removeProduct.length; counter++){
+//   removeProduct[counter].addEventListener("click", (event) => {
     // alert("Let's go boys")
-    event.target.parentElement.parentElement.parentElement.remove()
+//     event.target.parentElement.parentElement.parentElement.remove()
     
 
-  })
-}
-// function deleteBtn(id) {
-//   alert("Deletes")
-//   if(id >= 0) {
-//     products.splice(id,1)
-//     for(let i =0; i < products.length; i++) {
-//       products[i].id = i++;
-//     }
-//   }
+//   })
+// }
+
+// let editBtn = document.querySelectorAll("#edt-btn")
+// for(let i = 0; editBtn.length; i++) {
+//   editBtn[i].addEventListener("click", (event) => {
+//     event.target.parentElement
+    
+//   })
+// }
+// function editButton () {
+
 // }
 

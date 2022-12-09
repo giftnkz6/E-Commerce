@@ -146,18 +146,19 @@ checkOutButton.forEach( value => {
 
 // });
 
-let colorScreen = document.querySelector("#colour").value;
+let colorScreen=() => document.querySelector("#colour").value;
 
 function filter() {
     
-    if(colorScreen == "Black"){
+    if(colorScreen() == "Black"){
         let blackFilter = products.filter((color) => {
             return color.colour == "Black"
         })
         console.table(blackFilter);
-        document.querySelector(".product-wrapper").innerHTML +=``
+        document.querySelector(".product-wrapper1").innerHTML =``
         blackFilter.forEach((sneaker)=>{
-            document.querySelector(".product-wrapper").innerHTML += ` 
+            document.querySelector(".product-wrapper1").innerHTML += ` 
+            <div style="border-top: 2px solid black;"></div>
             <div class= "col-lg-3 col-md-4 col-sm-6">
             <div class="card" style="width: 14rem;">
                 <img src= "${sneaker.image}" class="card-img-top" alt="...">
@@ -176,14 +177,16 @@ function filter() {
             `
         })
     }
-    else if(colorScreen == "White"){
+    
+    else if(colorScreen() == "White"){
         let whiteFilter = products.filter((color) => {
             return color.colour == "White"
         })
         console.table(whiteFilter);
-        document.querySelector(".product-wrapper").innerHTML +=``
+        document.querySelector(".product-wrapper").innerHTML =``
         whiteFilter.forEach((sneaker)=>{
             document.querySelector(".product-wrapper").innerHTML += ` 
+            <div style="border-top: 2px solid black;"></div>
             <div class= "col-lg-3 col-md-4 col-sm-6">
             <div class="card" style="width: 14rem;">
                 <img src= "${sneaker.image}" class="card-img-top" alt="...">
@@ -202,12 +205,12 @@ function filter() {
             `
         })
     }
-    else if(colorScreen == "Orange"){
+    else if(colorScreen() == "Orange"){
         let orangeFilter = products.filter((color) => {
             return color.colour == "Orange"
         })
         console.table(orangeFilter);
-        document.querySelector(".product-wrapper").innerHTML +=``
+        document.querySelector(".product-wrapper").innerHTML =``
         orangeFilter.forEach((sneaker)=>{
             document.querySelector(".product-wrapper").innerHTML += ` 
             <div class= "col-lg-3 col-md-4 col-sm-6">
@@ -228,12 +231,12 @@ function filter() {
             `
         })
     }
-    else if(colorScreen == "Red"){
+    else if(colorScreen() == "Red"){
         let redFilter = products.filter((color) => {
             return color.colour == "Red"
         })
         console.table(redFilter);
-        document.querySelector(".product-wrapper").innerHTML +=``
+        document.querySelector(".product-wrapper").innerHTML =``
         redFilter.forEach((sneaker)=>{
             document.querySelector(".product-wrapper").innerHTML += ` 
             <div class= "col-lg-3 col-md-4 col-sm-6">
@@ -254,18 +257,18 @@ function filter() {
             `
         })   
     }
-    else if(colorScreen == "Purple"){
+    else if(colorScreen() == "Purple"){
         let purpleFilter = products.filter((color) => {
             return color.colour == "Purple"
         })
         console.table(purpleFilter);
     }
-    else if(colorScreen == "Grey"){
+    else if(colorScreen() == "Grey"){
         let greyFilter = products.filter((color) => {
             return color.colour == "Grey"
         })
         console.table(greyFilter); 
-        document.querySelector(".product-wrapper").innerHTML +=``
+        document.querySelector(".product-wrapper").innerHTML =``
         greyFilter.forEach((sneaker)=>{
             document.querySelector(".product-wrapper").innerHTML += ` 
             <div class= "col-lg-3 col-md-4 col-sm-6">
@@ -287,7 +290,7 @@ function filter() {
         })
     }
     else{
-        document.querySelector(".product-wrapper").innerHTML +=``
+        document.querySelector(".product-wrapper").innerHTML =``
         products.forEach((sneaker)=>{
             document.querySelector(".product-wrapper").innerHTML += ` 
             <div class= "col-lg-3 col-md-4 col-sm-6">
