@@ -89,7 +89,7 @@ img{
 /* form */
 #products .container .container-wrapper{
     display: flex;
-    width: 400px;
+    width: 200px;
     margin: auto;
     gap: 2px;
 }

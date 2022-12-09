@@ -160,6 +160,7 @@ let sortButton = document.querySelector("#sort-btn");
 sortButton.addEventListener("click", (e)=>{
     e.preventDefault()
     sorted();
+    localStorage.removeItem('products');
 })
 
 function sorted() {
@@ -175,8 +176,7 @@ function sorted() {
         }
     })
     console.table(sortedProducts);
-    // document.querySelector('.table-sort').innerHTML = sortedProducts.forEach;
-    // document.querySelector(".table-sort").innerHTML = ``
+    document.querySelector(".table-sort").innerHTML = ``
     sortedProducts.forEach((sorts) => {
         document.querySelector(".table-sort").innerHTML += `
         <tr>
@@ -208,7 +208,7 @@ function sorted() {
                       </div>
                         </div>
                         <div class="modal-footer">
-                          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                           
                           <button type="button" class="btn btn-primary">Save changes</button>
                         </div>
                       </div>
@@ -222,26 +222,13 @@ function sorted() {
 
 }
 
-// let removeProduct = document.querySelectorAll("#delete-btn")
-// for(let counter = 0; counter < removeProduct.length; counter++){
-//   removeProduct[counter].addEventListener("click", (event) => {
-    // alert("Let's go boys")
-//     event.target.parentElement.parentElement.parentElement.remove()
-    
+let removeProduct = document.querySelectorAll("#delete-btn")
+for(let counter = 0; counter < removeProduct.length; counter++){
+  removeProduct[counter].addEventListener("click", (event) => {
+    event.target.parentElement.parentElement.parentElement.remove()
+  })
+}
 
-//   })
-// }
-
-// let editBtn = document.querySelectorAll("#edt-btn")
-// for(let i = 0; editBtn.length; i++) {
-//   editBtn[i].addEventListener("click", (event) => {
-//     event.target.parentElement
-    
-//   })
-// }
-// function editButton () {
-
-// }
 
 
 
@@ -271,17 +258,17 @@ let addProductBtn = document.querySelector("#add-product")
 console.log(addProductBtn);
 addProductBtn.addEventListener("click", () => {
   console.log("Nanzo");
-  let inputId = document.querySelector("#id-add-btn")
+  // let inputId = document.querySelector("#id-add-btn").value;
   let inputBrand = document.querySelector("#brand-add-btn").value;
   let inputName = document.querySelector("#name-add-btn").value;
   let inputPrice = document.querySelector("#price-add-btn").value;
   let inputColour = document.querySelector("#colour-add-btn").value;
-  let inputImage = document.querySelector("#image-add-btn").value;
+  // let inputImage = document.querySelector("#image-add-btn").value;
  
   
 products.push(
   {
-    id: `${inputId.length}`,
+    // id: `${inputId}`,
     brand: `${inputBrand}`,
       name: `${inputName}`,
       price: `${inputPrice}`,
