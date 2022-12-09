@@ -16,6 +16,8 @@ header nav div div ul li{
     padding: 0 5rem;
 }
 body{
+    /* background-color: #5B84B1FF; */
+    /* color: tomato; */
     text-align: center;
     /* background-color: #5B84B1FF; */
     /* background-color: #D85A7FFF; */
@@ -63,6 +65,7 @@ img{
     /* color: tomato; */
     /* background-color: #5B84B1FF; */
     /* background-color: #D85A7FFF; */
+    /* color: tomato; */
     color: black;
     /* background-image: url("https://images.freecreatives.com/wp-content/uploads/2017/01/Nike-Black-and-White-Logo.jpg"); */
     background-image: url("https://i.postimg.cc/wMKN5nR3/Background-image.jpg");
@@ -109,6 +112,7 @@ img{
     /* height: 30rem; */
     margin: 2rem 0;
     color: black;
+    /* color: tomato; */
 
 }
 

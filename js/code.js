@@ -128,13 +128,15 @@ showSneakers();
 
 
 let checkOutButton = document.querySelectorAll(".buttons");
-
+let counter = 0;
 // Checkout button event listener
 checkOutButton.forEach( value => {
     value.addEventListener("click", (e) => {
         e.preventDefault()
-        alert("Successfully added to your checkout")
+        // alert("Successfully added to your checkout")
         console.log(e.currentTarget.id);
+        counter += 1;
+        console.log(counter);
     })
 })
 
