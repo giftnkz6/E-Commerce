@@ -1,3 +1,5 @@
+// localStorage.removeItem('products');
+
 //  Array of objects
 let products = JSON.parse(localStorage.getItem("products")) ? 
     JSON.parse(localStorage.getItem("products")) : [
@@ -174,7 +176,7 @@ function sorted() {
     })
     console.table(sortedProducts);
     // document.querySelector('.table-sort').innerHTML = sortedProducts.forEach;
-    document.querySelector(".table-sort").innerHTML = ``
+    // document.querySelector(".table-sort").innerHTML = ``
     sortedProducts.forEach((sorts) => {
         document.querySelector(".table-sort").innerHTML += `
         <tr>
@@ -240,4 +242,62 @@ function sorted() {
 // function editButton () {
 
 // }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+let addProductBtn = document.querySelector("#add-product")
+console.log(addProductBtn);
+addProductBtn.addEventListener("click", () => {
+  console.log("Nanzo");
+  let inputId = document.querySelector("#id-add-btn")
+  let inputBrand = document.querySelector("#brand-add-btn").value;
+  let inputName = document.querySelector("#name-add-btn").value;
+  let inputPrice = document.querySelector("#price-add-btn").value;
+  let inputColour = document.querySelector("#colour-add-btn").value;
+  let inputImage = document.querySelector("#image-add-btn").value;
+ 
+  
+products.push(
+  {
+    id: `${inputId.length}`,
+    brand: `${inputBrand}`,
+      name: `${inputName}`,
+      price: `${inputPrice}`,
+      colour: `${inputColour}`
+  }
+);
+
+localStorage.setItem('products', JSON.stringify(products));
+  // let newArray = {
+  
+  // }
+
+  // console.table(newArray);
+});
+
+
+
+
 

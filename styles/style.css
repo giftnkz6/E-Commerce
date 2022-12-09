@@ -120,6 +120,10 @@ a:hover{
     color: blue;
 }
 
+/* Filter */
+.filter{
+    margin-top: .5rem;
+}
 
 @media screen and (width <= 870px) {
     .home h1{
@@ -137,5 +141,7 @@ a:hover{
         margin: auto;
         margin-top: 21px;
     }
-    
+    .filter{
+        margin-top: .5rem;
+    }
 }
