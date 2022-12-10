@@ -110,7 +110,7 @@ function showSneakers () {
                 <h5 class="card-title"> ${sneaker.brand}</h5>
                 <p class="card-text">${sneaker.name}</p>
                 <p class="card-text">${sneaker.colour}</p>
-                <p class="card-text">R${sneaker.price}</p>
+                <p class="card-text">R ${sneaker.price}</p>
         
                 <button class="buttons">Add to Checkout</button>
             </div>

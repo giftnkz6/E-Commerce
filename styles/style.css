@@ -115,6 +115,14 @@ img{
     /* color: tomato; */
 
 }
+#footer footer #socialIcon ul {
+    display: flex;
+    font-size: xx-large;
+}
+li{
+    list-style: none;
+    margin: auto;
+}
 
 a:hover{
     color: blue;
@@ -145,6 +153,13 @@ a:hover{
     }
     
 }
+@media screen and (width <= 990px) {
+    .home{
+        width: 100%;
+        height: 25rem;
+    }
+    
+}
 @media screen and (width <= 575px) {
     #products .container .container-wrapper{
         flex-direction: column;
@@ -170,4 +185,18 @@ a:hover{
         height: 20rem;
     }
     
+}
+
+@media screen and (width <= 400px) {
+    .home{
+        width: 100%;
+        height: 20rem;
+    }
+    
+}
+@media screen and (width <= 992px) {
+    .home{
+        width: 100%;
+        height: 25rem;
+    }
 }
