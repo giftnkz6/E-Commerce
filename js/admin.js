@@ -105,6 +105,7 @@ let products = JSON.parse(localStorage.getItem("products")) ?
 
 
 function adminData () {
+  document.querySelector("#admin-data").innerHTML = "";
     products.forEach((sneaker)=>{
         document.querySelector("#admin-data").innerHTML += ` 
         <tr>
