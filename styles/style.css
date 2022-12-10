@@ -124,10 +124,24 @@ a:hover{
 .filter{
     margin-top: .5rem;
 }
+.calculation-wrapper{
+    width: 100px;
+    background-color: blue;
+    margin: auto;
+    font-size: larger;
+}
+
+#checkout-list img{
+    width: 8rem;
+}
 
 @media screen and (width <= 870px) {
     .home h1{
         font-size: 1rem;
+    }
+    .home{
+        width: 100%;
+        height: 20rem;
     }
     
 }
@@ -144,4 +158,16 @@ a:hover{
     .filter{
         margin-top: .5rem;
     }
+    .home{
+        width: 100%;
+        height: 20rem;
+    }
+
+}
+@media screen and (width <= 550px) {
+    .home{
+        width: 100%;
+        height: 20rem;
+    }
+    
 }

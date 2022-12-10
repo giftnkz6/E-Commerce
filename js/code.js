@@ -127,24 +127,32 @@ showSneakers();
 
 
 
-// let checkOutButton = document.querySelectorAll(".buttons");
-// let counter = 0;
-// // Checkout button event listener
-// checkOutButton.forEach( value => {
-//     value.addEventListener("click", (e) => {
-//         e.preventDefault()
-//         // alert("Successfully added to your checkout")
-//         console.log(e.currentTarget.id);
-//         counter += 1;
-//         console.log(counter);
-//     })
-// })
+let checkOutButton = [...document.querySelectorAll(".buttons")];
+let counter = 0;
+let array = {
 
-// checkOutButton.addEventListener("click", (e) => {
-//     e.preventDefault()
-//     alert("Successfully added to your checkout")
+}
 
-// });
+
+
+// Checkout button event listener
+let checkoutArray = [];
+localStorage.setItem('checkoutStore', JSON.stringify(checkoutArray))
+Object.keys(checkOutButton).forEach( value => {
+    checkOutButton[value].addEventListener("click", (e) => {
+        e.preventDefault()
+        console.log(products[value])
+        checkoutArray.push(products[value])
+        console.log(checkoutArray)
+        localStorage.setItem('checkoutStore', JSON.stringify(checkoutArray))
+        // alert("Successfully added to your checkout")
+        // console.log(e.currentTarget.id);
+        // counter += 1;
+        
+    })
+    
+})
+
 
 let colorScreen=() => document.querySelector("#colour").value;
 
@@ -332,189 +340,3 @@ function filter() {
     }
     
 };
-
-// let brandScreen = document.querySelector("brand-filter").value;
-// function filterBrand() {
-    
-//     if(brandScreen() == "Nike"){
-//         let nikeFilter = products.filter((brand) => {
-//             return brand.brand == "Nike"
-//         })
-//         console.table(nikeFilter);
-//         document.querySelector(".product-wrapper").innerHTML =``
-//         nikeFilter.forEach((sneaker)=>{
-//             document.querySelector(".product-wrapper").innerHTML += ` 
-//             <div style="border-top: 2px solid black;"></div>
-//             <div class= "col-lg-3 col-md-4 col-sm-6">
-//             <div class="card" style="width: 14rem;">
-//                 <img src= "${sneaker.image}" class="card-img-top" alt="...">
-//                 <div class="card-body">
-//                     <h5 class="card-title"> ${sneaker.brand}</h5>
-//                     <p class="card-text">${sneaker.name}</p>
-//                     <p class="card-text">${sneaker.colour}</p>
-//                     <p class="card-text">R${sneaker.price}</p>
-            
-//                     <button class="buttons">Add to Checkout</button>
-//                 </div>
-//             </div>    
-    
-//             </div>
-            
-//             `
-//         })
-//     }
-    
-//     else if(brandScreen() == "Puma"){
-//         let pumaFilter = products.filter((color) => {
-//             return brand.brand == "Puma"
-//         })
-//         console.table(pumaFilter);
-//         document.querySelector(".product-wrapper").innerHTML =``
-//         pumaFilter.forEach((sneaker)=>{
-//             document.querySelector(".product-wrapper").innerHTML += ` 
-//             <div class= "col-lg-3 col-md-4 col-sm-6">
-//             <div class="card" style="width: 14rem;">
-//                 <img src= "${sneaker.image}" class="card-img-top" alt="...">
-//                 <div class="card-body">
-//                     <h5 class="card-title"> ${sneaker.brand}</h5>
-//                     <p class="card-text">${sneaker.name}</p>
-//                     <p class="card-text">${sneaker.colour}</p>
-//                     <p class="card-text">R${sneaker.price}</p>
-            
-//                     <button class="buttons">Add to Checkout</button>
-//                 </div>
-//             </div>    
-    
-//             </div>
-            
-//             `
-//         })
-//     }
-//     else if(brandScreen() == "Adidas"){
-//         let adidasFilter = products.filter((color) => {
-//             return color.colour == "Orange"
-//         })
-//         console.table(orangeFilter);
-//         document.querySelector(".product-wrapper").innerHTML =``
-//         adidasFilter.forEach((sneaker)=>{
-//             document.querySelector(".product-wrapper").innerHTML += ` 
-//             <div class= "col-lg-3 col-md-4 col-sm-6">
-//             <div class="card" style="width: 14rem;">
-//                 <img src= "${sneaker.image}" class="card-img-top" alt="...">
-//                 <div class="card-body">
-//                     <h5 class="card-title"> ${sneaker.brand}</h5>
-//                     <p class="card-text">${sneaker.name}</p>
-//                     <p class="card-text">${sneaker.colour}</p>
-//                     <p class="card-text">R${sneaker.price}</p>
-            
-//                     <button class="buttons">Add to Checkout</button>
-//                 </div>
-//             </div>    
-    
-//             </div>
-            
-//             `
-//         })
-//     }
-//     else if(brandScreen() == "Red"){
-//         let redFilter = products.filter((color) => {
-//             return color.colour == "Red"
-//         })
-//         console.table(redFilter);
-//         document.querySelector(".product-wrapper").innerHTML =``
-//         redFilter.forEach((sneaker)=>{
-//             document.querySelector(".product-wrapper").innerHTML += ` 
-//             <div class= "col-lg-3 col-md-4 col-sm-6">
-//             <div class="card" style="width: 14rem;">
-//                 <img src= "${sneaker.image}" class="card-img-top" alt="...">
-//                 <div class="card-body">
-//                     <h5 class="card-title"> ${sneaker.brand}</h5>
-//                     <p class="card-text">${sneaker.name}</p>
-//                     <p class="card-text">${sneaker.colour}</p>
-//                     <p class="card-text">R${sneaker.price}</p>
-            
-//                     <button class="buttons">Add to Checkout</button>
-//                 </div>
-//             </div>    
-    
-//             </div>
-            
-//             `
-//         })   
-//     }
-//     else if(colorScreen() == "Purple"){
-//         let purpleFilter = products.filter((color) => {
-//             return color.colour == "Purple"
-//         })
-//         console.table(purpleFilter);
-//         document.querySelector(".product-wrapper").innerHTML =``
-//         purpleFilter.forEach((sneaker)=>{
-//             document.querySelector(".product-wrapper").innerHTML += ` 
-//             <div class= "col-lg-3 col-md-4 col-sm-6">
-//             <div class="card" style="width: 14rem;">
-//                 <img src= "${sneaker.image}" class="card-img-top" alt="...">
-//                 <div class="card-body">
-//                     <h5 class="card-title"> ${sneaker.brand}</h5>
-//                     <p class="card-text">${sneaker.name}</p>
-//                     <p class="card-text">${sneaker.colour}</p>
-//                     <p class="card-text">R${sneaker.price}</p>
-            
-//                     <button class="buttons">Add to Checkout</button>
-//                 </div>
-//             </div>    
-    
-//             </div>
-            
-//             `
-//         })
-//     }
-//     else if(colorScreen() == "Grey"){
-//         let greyFilter = products.filter((color) => {
-//             return color.colour == "Grey"
-//         })
-//         console.table(greyFilter); 
-//         document.querySelector(".product-wrapper").innerHTML =``
-//         greyFilter.forEach((sneaker)=>{
-//             document.querySelector(".product-wrapper").innerHTML += ` 
-//             <div class= "col-lg-3 col-md-4 col-sm-6">
-//             <div class="card" style="width: 14rem;">
-//                 <img src= "${sneaker.image}" class="card-img-top" alt="...">
-//                 <div class="card-body">
-//                     <h5 class="card-title"> ${sneaker.brand}</h5>
-//                     <p class="card-text">${sneaker.name}</p>
-//                     <p class="card-text">${sneaker.colour}</p>
-//                     <p class="card-text">R${sneaker.price}</p>
-            
-//                     <button class="buttons">Add to Checkout</button>
-//                 </div>
-//             </div>    
-    
-//             </div>
-            
-//             `
-//         })
-//     }
-//     else if(colorScreen() == "All"){
-//         document.querySelector(".product-wrapper").innerHTML =``
-//         products.forEach((sneaker)=>{
-//             document.querySelector(".product-wrapper").innerHTML += ` 
-//             <div class= "col-lg-3 col-md-4 col-sm-6">
-//             <div class="card" style="width: 14rem;">
-//                 <img src= "${sneaker.image}" class="card-img-top" alt="...">
-//                 <div class="card-body">
-//                     <h5 class="card-title"> ${sneaker.brand}</h5>
-//                     <p class="card-text">${sneaker.name}</p>
-//                     <p class="card-text">${sneaker.colour}</p>
-//                     <p class="card-text">R${sneaker.price}</p>
-            
-//                     <button class="buttons">Add to Checkout</button>
-//                 </div>
-//             </div>    
-    
-//             </div>
-            
-//             `
-//         })
-//     }
-    
-// };

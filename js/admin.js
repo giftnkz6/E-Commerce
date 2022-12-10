@@ -235,12 +235,12 @@ let addProductBtn = document.querySelector("#add-product")
 console.log(addProductBtn);
 addProductBtn.addEventListener("click", () => {
   console.log("Nanzo");
-  // let inputId = document.querySelector("#id-add-btn").value;
+  let inputId = document.querySelector("#id-add-btn").value;
   let inputBrand = document.querySelector("#brand-add-btn").value;
   let inputName = document.querySelector("#name-add-btn").value;
   let inputPrice = document.querySelector("#price-add-btn").value;
   let inputColour = document.querySelector("#colour-add-btn").value;
-  // let inputImage = document.querySelector("#image-add-btn").value;
+  let inputImage = document.querySelector("#image-add-btn").value;
 
   function formValidation() {
     let productBrand = document.forms["productForm"]["product-brand"].value;
@@ -252,26 +252,23 @@ addProductBtn.addEventListener("click", () => {
       return false;
     }
   }
-  // formValidation()
+  formValidation()
  
   
 products.push(
   {
-    // id: `${inputId}`,
+    id: `${inputId}`,
     brand: `${inputBrand}`,
       name: `${inputName}`,
       price: `${inputPrice}`,
-      colour: `${inputColour}`
+      colour: `${inputColour}`,
+      image:`${inputImage}`
   }
 );
 
 localStorage.setItem('products', JSON.stringify(products));
-  // let newArray = {
-  
-  // }
-
-  // console.table(newArray);
 });
+
 
 
 

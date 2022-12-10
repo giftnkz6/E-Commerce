@@ -1,18 +1,22 @@
+let checkoutArray = JSON.parse(localStorage.getItem('checkoutStore'));
+console.log(checkoutArray)
 
-
-// (function checks() {
-//     products.forEach((sneaker)=>{
-//         document.querySelector("#checkout-list").innerHTML = ` 
-//         <tr>
-//                     <td>${sneaker.image}</td>
-//                     <td>${sneaker.name}</td>
-//                     <td>R${sneaker.price}</td>
-//                     <td>R${sneaker.price}</td>
-
-                  
-//                   </div></td>
-//                   </tr>
+function showCheckout () {
+    checkoutArray.forEach((item)=>{
+        document.querySelector("#checkout-list").innerHTML += ` 
+        <tr>
         
-//         `
-//     })
-// })();
+                <td><img src= "${item.image}" class="card-img-top" alt="..."></td>
+                <td>${item.name}</td>
+                <td>${item.name}</td>
+                <td>R${item.price}</td>
+    
+            </div>
+        </div>    
+
+       </tr>
+        
+        `
+    })
+};
+
