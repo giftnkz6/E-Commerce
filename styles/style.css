@@ -16,13 +16,13 @@ header nav div div ul li{
     padding: 0 5rem;
 }
 body{
-    /* background-color: #5B84B1FF; */
+    background-color: #5B84B1FF;
     /* color: tomato; */
     text-align: center;
     /* background-color: #5B84B1FF; */
     /* background-color: #D85A7FFF; */
     /* color: #ED2B33FF; */
-    /* color: skyblue; */
+    color: skyblue;
     /* color: tomato; */
 }
 .check{
@@ -46,6 +46,7 @@ body{
 a{
     text-decoration: none;
     color: black;
+    font-size: x-large;
 }
 .logo{
     width: 2rem;
@@ -117,15 +118,19 @@ img{
 }
 #footer footer #socialIcon ul {
     display: flex;
-    font-size: xx-large;
+    font-size: x-large;
+    margin-left: 8rem;
 }
 li{
     list-style: none;
-    margin: auto;
+    margin-left: 50px;
+}
+footer{
+    margin-top: 5rem;
 }
 
 a:hover{
-    color: blue;
+    color: skyblue;
 }
 
 /* Filter */
@@ -133,10 +138,16 @@ a:hover{
     margin-top: .5rem;
 }
 .calculation-wrapper{
-    width: 100px;
-    background-color: blue;
+    display: flex;
+    width: 350px;
+
+    /* background-color: blue; */
     margin: auto;
     font-size: larger;
+}
+.calculation-wrapper p{
+    margin-left: 1rem;
+    color: #000;
 }
 
 #checkout-list img{
