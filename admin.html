@@ -42,7 +42,7 @@
 </button>
 
 <!-- Modal -->
-<form>
+<form name="productForm" onsubmit="return formValidation()">
 
   <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
@@ -59,16 +59,16 @@
         <div class="modal-body">
           <div class="mb-3">
                           
-            <input type="text" class="form-control" id="brand-add-btn" placeholder="Enter brand of the product">
+            <input type="text" class="form-control" id="brand-add-btn" name="product-brand" placeholder="Enter brand of the product">
           </div>
           <div class="mb-3">
-          <input type="text" class="form-control" id="name-add-btn" placeholder="Enter name of the product">
+          <input type="text" class="form-control" id="name-add-btn" name="product-name" placeholder="Enter name of the product">
           </div>
           <div class="mb-3">
-          <input type="number" class="form-control" id="price-add-btn" placeholder="Enter the price of the product">
+          <input type="number" class="form-control" id="price-add-btn" name="product-price" placeholder="Enter the price of the product">
           </div>
           <div class="mb-3">
-          <input type="text" class="form-control" id="colour-add-btn" placeholder="Enter the colour of the product">
+          <input type="text" class="form-control" id="colour-add-btn" name="product-colour" placeholder="Enter the colour of the product">
           </div>
           <!-- <div class="mb-3">             
             <input type="text" class="form-control" id="image-add-btn" placeholder="Enter the link the image">
@@ -76,7 +76,9 @@
             </div>
             <div class="modal-footer">
               <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-              <button type="button" class="btn btn-primary" id="add-product">Add product</button>
+              <!-- <button type="button" class="btn btn-primary" id="add-product">Add product</button> -->
+              <!-- <button type="submit" class="btn btn-primary" id="add-product">Add</button> -->
+              <input type="submit" value="Submit" class="btn btn-primary" id="add-product">
             </div>
           </div>
         </div>

@@ -231,29 +231,6 @@ for(let counter = 0; counter < removeProduct.length; counter++){
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 let addProductBtn = document.querySelector("#add-product")
 console.log(addProductBtn);
 addProductBtn.addEventListener("click", () => {
@@ -264,6 +241,18 @@ addProductBtn.addEventListener("click", () => {
   let inputPrice = document.querySelector("#price-add-btn").value;
   let inputColour = document.querySelector("#colour-add-btn").value;
   // let inputImage = document.querySelector("#image-add-btn").value;
+
+  function formValidation() {
+    let productBrand = document.forms["productForm"]["product-brand"].value;
+    let productName = document.forms["productForm"]["product-name"].value;
+    let productPrice = document.forms["productForm"]["product-price"].value;
+    let productColour = document.forms["productForm"]["product-colour"].value;
+    if(productBrand == "" || (productName == "") || (productPrice == "") || (productColour == "") ) {
+      alert("Please fill out all input")
+      return false;
+    }
+  }
+  // formValidation()
  
   
 products.push(

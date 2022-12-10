@@ -1,2 +1,5 @@
 product-flowchart   https://cloud.smartdraw.com/share.aspx/?pubDocShare=F0DA7D67D37841531C6414C67682D2B82B9
+
 admin-flowchart     https://cloud.smartdraw.com/share.aspx/?pubDocShare=ED3677309B6F76966ACBEA147A2BE78168D
+
+checkout-flowchart  https://cloud.smartdraw.com/share.aspx/?pubDocShare=1DB58C45D8891E87E266757FD8CEE87568A
