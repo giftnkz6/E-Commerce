@@ -166,7 +166,6 @@ function filter() {
         document.querySelector(".product-wrapper").innerHTML =``
         blackFilter.forEach((sneaker)=>{
             document.querySelector(".product-wrapper").innerHTML += ` 
-            <div style="border-top: 2px solid black;"></div>
             <div class= "col-lg-3 col-md-4 col-sm-6">
             <div class="card" style="width: 14rem;">
                 <img src= "${sneaker.image}" class="card-img-top" alt="...">
