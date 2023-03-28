@@ -10,6 +10,7 @@ function showCheckout () {
                 <td>${item.name}</td>
                 <td>${item.colour}</td>
                 <td>R ${item.price}</td>
+                <td><button class="btn btn-danger">delete</button></td>
     
             </div>
         </div>    
